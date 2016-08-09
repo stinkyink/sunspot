@@ -151,7 +151,7 @@ module Sunspot
       end
 
       def solr_data_dir
-        File.expand_path(@solr_data_dir || Dir.tmpdir)
+        File.expand_path(@solr_data_dir || File.join(solr_home, 'data'))
       end
 
       def solr_home
